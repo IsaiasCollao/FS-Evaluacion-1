@@ -1,0 +1,43 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none ;
+    color: white;
+}
+.sesion{
+    text-align: right;
+    background-color: steelblue;
+    padding: 1%;
+}
+.sesion li{
+    display: inline;
+    padding: 1%;
+}
+
+.navbar{
+    background-color: steelblue;
+    text-align: center;
+    padding: 1%;
+}
+.navbar li{
+    display: inline;
+    padding: 3%;
+}
+
+#ofertas{
+
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 1%;
+}
+.barraofertas{
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 100%;
+    align-items: center;
+    overflow: hidden;
+}

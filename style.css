@@ -3,14 +3,20 @@
     margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
 }
+.titulo-pagina {
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+}
 
-a{
+
+header a{
     text-decoration: none ;
     color: white;
 }
 .sesion{
     text-align: right;
-    background-color: steelblue;
+    background-color: blueviolet;
     padding: 1%;
 }
 .sesion li{
@@ -19,13 +25,29 @@ a{
 }
 
 .navbar{
-    background-color: steelblue;
+    background-color: blueviolet;
     text-align: center;
     padding: 1%;
 }
 .navbar li{
     display: inline;
     padding: 3%;
+}
+.busqueda {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.portada {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.portada img {
+  width: 60%;
+  height: auto;
+  display: inline-block;
+  object-fit: contain;
 }
 
 #ofertas{
@@ -34,10 +56,85 @@ a{
     text-decoration: underline;
     margin-top: 1%;
 }
-.barraofertas{
+/* Contenedor principal */
+.barraofertas {
+    display: flex;
+    flex-wrap: wrap;         /* Si no caben, que bajen a la siguiente fila */
+    gap: 20px;               /* Espacio entre secciones */
+    justify-content: center; /* Centra las secciones */
+}
+
+/* Cada producto */
+.barraofertas section {
+    flex: 1 1 300px;         
+    max-width: 350px;        
+    text-align: center;      
+    padding: 15px;           /* Espaciado interno */
+    background-color: #fff;  /* Fondo blanco para destacar */
+    border: 1px solid #ddd;  /* Borde suave */
+    border-radius: 10px;     /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.barraofertas section:hover {
+    transform: translateY(-5px); /* Se eleva un poquito */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Más sombra */
+}
+
+
+/* Imagenes responsivas */
+.barraofertas img {
+    max-width: 100%;  /* Que nunca sobrepasen su contenedor */
+    height: auto;     /* Mantiene la proporción */
+    display: block;
+    margin: 0 auto;   /* Centra la imagen */
+}
+
+
+footer{
+    background-color: blueviolet;
+    padding: 1%;
+
+}
+footer ul{
+    list-style-type: none;
+    text-align: left;
+}
+footer li{
+    display: list-item;
+}
+footer a{
+    text-decoration: none;
+    color: white
+}
+.footerinfo{
+    border-bottom: 1px solid black;
     display: grid;
-    grid-auto-flow: column;
-    max-width: 100%;
-    align-items: center;
-    overflow: hidden;
+    grid-column: 1 /span 2;
+    justify-items: left;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.mediosdepago{
+    display: grid;
+    border-bottom: 1px solid black;
+
+}
+.mediosdepago img {
+    max-width: 100%;   /* La imagen nunca será más ancha que su contenedor */
+    height: auto;      /* Mantiene la proporción */
+    display: inli;    /* Quita espacios raros abajo de la imagen */
+    margin-top: 10px;  /* Separación opcional con el texto */
+}
+.footersucursal{
+    display: grid;
+    grid-column: 1 /span 2;
+    justify-items: left;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    text-align: left;
+}
+
+.fsucursal p{
+    color: white;
 }

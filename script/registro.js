@@ -26,7 +26,7 @@ users.push({ username, email, password });
 localStorage.setItem('users', JSON.stringify(users));
 alert('Registro exitoso. Ahora puedes iniciar sesión.');
 form.reset(); // Limpia el formulario después del registro exitoso
-window.location.href = 'login.html'; // Redirige a la página de login
+window.location.href = 'index.html'; // Redirige a la página inicial
     });
 });
     
